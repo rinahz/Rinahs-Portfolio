@@ -11,7 +11,4 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
-## To fill in
 
-- `app/components/PortfolioGrid.tsx` — replace the placeholder project names/blurbs in the `projects` array, and the `#` hrefs on the GitHub/LinkedIn/Telegram links.
-- About me photo — currently a dashed placeholder box; swap in a real `<Image>` when you have one.
