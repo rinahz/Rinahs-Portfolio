@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+:root {
+  --color-pink: #FFB7C3;
+  --color-pink-soft: #fbdde6;
+  --color-green: #388659;
+  --color-green-dark: #22523e;
+  --color-cream: #fbf6ee;
+  --color-on-green: #fbe3ea;
+}
+
+@theme inline {
+  --color-pink: var(--color-pink);
+  --color-pink-soft: var(--color-pink-soft);
+  --color-green: var(--color-green);
+  --color-green-dark: var(--color-green-dark);
+  --color-cream: var(--color-cream);
+  --color-on-green: var(--color-on-green);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-green-dark);
+  font-family: var(--font-sans), sans-serif;
+}
+
+.gradient-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("/images/background.jpg") center center / cover no-repeat;
+}
