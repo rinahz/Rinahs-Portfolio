@@ -195,9 +195,9 @@ export default function PortfolioGrid() {
       <motion.div
         layout
         transition={tileTransition}
-        onClick={() => !expandedKey && setExpandedKey("experience")}
+        onClick={() => expandedKey !== "experience" && setExpandedKey("experience")}
         className={`bg-green p-6 md:p-8 min-h-[220px] ${getTileClasses("experience", expandedKey)} ${
-          expandedKey ? "" : "cursor-pointer hover:brightness-110 transition"
+          expandedKey === "experience" ? "" : "cursor-pointer hover:brightness-110 transition"
         }`}
       >
         <div className="flex items-start justify-between gap-4">
@@ -269,11 +269,11 @@ export default function PortfolioGrid() {
       <motion.div
         layout
         transition={tileTransition}
-        onClick={() => !expandedKey && setExpandedKey("about")}
+        onClick={() => expandedKey !== "about" && setExpandedKey("about")}
         className={`bg-pink p-6 md:p-8 min-h-[220px] flex flex-col md:flex-row gap-5 ${
           expandedKey === "about" ? "md:items-start" : "md:items-center"
         } ${getTileClasses("about", expandedKey)} ${
-          expandedKey ? "" : "cursor-pointer hover:brightness-110 transition"
+          expandedKey === "about" ? "" : "cursor-pointer hover:brightness-110 transition"
         }`}
       >
         <div className="flex-1">
@@ -339,9 +339,9 @@ export default function PortfolioGrid() {
       <motion.div
         layout
         transition={tileTransition}
-        onClick={() => !expandedKey && setExpandedKey("projects")}
+        onClick={() => expandedKey !== "projects" && setExpandedKey("projects")}
         className={`bg-pink p-6 md:p-8 min-h-[220px] ${getTileClasses("projects", expandedKey)} ${
-          expandedKey ? "" : "cursor-pointer hover:brightness-110 transition"
+          expandedKey === "projects" ? "" : "cursor-pointer hover:brightness-110 transition"
         }`}
       >
         <div className="flex items-start justify-between gap-4">
