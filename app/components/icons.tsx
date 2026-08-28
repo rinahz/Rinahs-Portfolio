@@ -40,3 +40,13 @@ export function CloseIcon(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function DownloadIcon(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M12 4v12" />
+      <path d="m6 12 6 6 6-6" />
+      <path d="M4 21h16" />
+    </svg>
+  );
+}
