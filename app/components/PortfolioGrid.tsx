@@ -172,10 +172,10 @@ export default function PortfolioGrid() {
         <p className="text-5xl md:text-5xl font-bold text-green leading-tight">
           I&apos;m Rinah!
         </p>
-        {/* <p className="mt-3.5 max-w-[34ch] text-base leading-relaxed text-green/90">
+        <p className="mt-3.5 max-w-[34ch] text-base leading-relaxed text-green/90">
           Junior in Computer Science &amp; AI at Cornell. I build full-stack systems and
           the AI that runs inside them.
-        </p> */}
+        </p>
         {/* <div className="mt-3.5 flex items-center gap-2 text-xs font-medium text-green">
           <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-green" />
           <span>Now — Software Engineer at MedSimAI</span>
