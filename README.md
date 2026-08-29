@@ -1,7 +1,6 @@
 # Rinah's Portfolio
 
-A Next.js + Tailwind portfolio site: a 2x2 tile grid (Hi, Experience and Projects, About me, Let's Connect). Clicking the Experience tile expands it in place to show project details.
-
+Welcome!! Check it out at https://rinahs-portfolio.vercel.app/
 ## Getting started
 
 ```bash
