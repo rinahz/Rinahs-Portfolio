@@ -365,10 +365,11 @@ export default function PortfolioGrid() {
             )}
           </div>
           <p className="mt-2 text-sm md:text-base text-green/90 leading-relaxed">
-            Hi, I&apos;m Rinah, a junior Computer Science and AI student at Cornell
-            University! I enjoy building systems across software and AI, from data and
-            models to the applications that put them to work. When I&apos;m not coding
-            I&apos;m crafting, from jewelry to clay!
+            Hi, I&apos;m Rinah, a junior studying Computer Science at Cornell, focused on AI.
+            I like working across the whole stack of a system: the data and models underneath,
+            and the interfaces that put them in front of real people.
+            Recently that&apos;s meant building LLM evaluation pipelines for simulated-patient training,
+            an AI-driven credit risk agent, and full-stack platforms used by thousands of people across dozens of countries.
           </p>
           {expandedKey !== "about" && (
             <p className="mt-4 text-sm font-medium text-green">Open for skills and tools →</p>
@@ -376,7 +377,12 @@ export default function PortfolioGrid() {
 
           {expandedKey === "about" && (
             <div className="mt-5">
-              <h3 className="text-lg md:text-xl font-semibold text-green">Skills</h3>
+              <p className="text-sm md:text-base text-green/90 leading-relaxed">
+                I&apos;m always looking for the next system to build or contribute too.
+                Especially ones that use AI in meaningful ways to help people. If you have
+                an opportunity, project, or just want to chat, feel free to reach out!
+              </p>
+              <h3 className="mt-5 text-lg md:text-xl font-semibold text-green">Skills</h3>
               <div className="mt-2 space-y-3 text-sm md:text-base">
                 <div>
                   <p className="font-medium text-green">Programming Languages</p>
