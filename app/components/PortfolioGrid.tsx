@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { CloseIcon, GithubIcon, LinkedinIcon, MailIcon } from "./icons";
@@ -119,6 +119,54 @@ const projects = [
 const tileTransition = { duration: 0.5, ease: [0.4, 0, 0.2, 1] as const };
 const EMAIL = "rxz4@cornell.edu";
 
+function TypewriterHeadline({ lines }: { lines: string[] }) {
+  const [lineIndex, setLineIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+
+  useEffect(() => {
+    if (lineIndex >= lines.length) return;
+    const currentLine = lines[lineIndex];
+
+    if (charIndex < currentLine.length) {
+      const timeout = setTimeout(() => setCharIndex((c) => c + 1), 60);
+      return () => clearTimeout(timeout);
+    }
+
+    if (lineIndex < lines.length - 1) {
+      const timeout = setTimeout(() => {
+        setLineIndex((l) => l + 1);
+        setCharIndex(0);
+      }, 250);
+      return () => clearTimeout(timeout);
+    }
+  }, [charIndex, lineIndex, lines]);
+
+  const finished = lineIndex >= lines.length - 1 && charIndex >= lines[lines.length - 1].length;
+
+  return (
+    <>
+      {lines.map((line, i) => {
+        const isPast = i < lineIndex;
+        const isCurrent = i === lineIndex;
+        const text = isPast ? line : isCurrent ? line.slice(0, charIndex) : "";
+        const showCursor = isCurrent && !finished;
+
+        return (
+          <p key={i} className="font-mono text-5xl md:text-5xl font-bold text-green leading-tight">
+            {text}
+            {showCursor && (
+              <span
+                aria-hidden="true"
+                className="ml-1 inline-block h-[0.85em] w-[3px] translate-y-[0.08em] bg-green animate-caret-blink"
+              />
+            )}
+          </p>
+        );
+      })}
+    </>
+  );
+}
+
 type ExpandedKey = "experience" | "about" | "projects" | null;
 
 const OTHER_ORDER: Exclude<ExpandedKey, null>[] = ["experience", "projects", "about"];
@@ -169,9 +217,12 @@ export default function PortfolioGrid() {
           expandedKey ? "md:col-start-1 md:row-start-2" : "md:col-start-1 md:row-start-1"
         }`}
       >
-        <p className="text-5xl md:text-5xl font-bold text-green leading-tight">Hi,</p>
-        <p className="text-5xl md:text-5xl font-bold text-green leading-tight">
-          I&apos;m Rinah!
+        <TypewriterHeadline lines={["Hello World,", "I'm Rinah!"]} />
+        <p className="text-med md:text-med italic text-green leading-tight">
+          CS & AI @ Cornell
+        </p>
+        <p className="text-med md:text-med text-green leading-tight">
+          Let&apos;s Connect!!
         </p>
         {/* <p className="mt-3.5 max-w-[34ch] text-base leading-relaxed text-green/90">
           Junior in Computer Science &amp; AI at Cornell. I build full-stack systems and
