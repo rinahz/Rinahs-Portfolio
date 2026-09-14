@@ -387,14 +387,13 @@ export default function PortfolioGrid() {
                 <div>
                   <p className="font-medium text-green">Programming Languages</p>
                   <p className="mt-1 text-green/80">
-                    Python, Java, TypeScript, JavaScript, OCaml
+                    Python, Java, TypeScript, JavaScript, OCaml, C
                   </p>
                 </div>
                 <div>
                   <p className="font-medium text-green">Frameworks &amp; Technologies</p>
                   <p className="mt-1 text-green/80">
-                    React.js, Next.js, Node.js, Django, Firebase, PostgreSQL, Tailwind CSS,
-                    OpenAI API, Selenium, NumPy, Git/GitHub, VS Code, IntelliJ
+                    React.js, Next.js, Node.js, Django, Firebase, PostgreSQL, NumPy, Pandas, PyTorch, Tensorflow, ROS, Tailwind CSS, OpenAI API, Selenium, Git, Github
                   </p>
                 </div>
               </div>
