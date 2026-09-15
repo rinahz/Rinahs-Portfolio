@@ -217,7 +217,7 @@ export default function PortfolioGrid() {
           expandedKey ? "md:col-start-1 md:row-start-2" : "md:col-start-1 md:row-start-1"
         }`}
       >
-        <TypewriterHeadline lines={["Hello World,", "I'm Rinah!"]} />
+        <TypewriterHeadline lines={["Hello, World!", "I'm Rinah"]} />
         <p className="text-med md:text-med italic text-green leading-tight">
           CS & AI @ Cornell
         </p>
